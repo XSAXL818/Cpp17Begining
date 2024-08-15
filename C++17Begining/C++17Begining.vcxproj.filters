@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\TestChapter">
+      <UniqueIdentifier>{7204bb8e-9797-4d0d-9d44-3a355ee5814f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\TestSection">
+      <UniqueIdentifier>{1f733009-3aab-42e1-8d7a-7dab49025cd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\TestPart">
+      <UniqueIdentifier>{64b10414-3567-4981-9a13-1c33dfebd577}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\TestChapter">
+      <UniqueIdentifier>{d982152c-ede7-4601-a561-c20c6a0def15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\TestSection">
+      <UniqueIdentifier>{1751672a-179b-4cf1-a5ba-c47c612ffac5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\TestPart">
+      <UniqueIdentifier>{d007fdb2-4fe9-4f4e-a100-c9800d679f17}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C++17Begining.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="NeedClass.cpp">
+      <Filter>源文件\TestChapter</Filter>
+    </ClCompile>
+    <ClCompile Include="MyTest.cpp">
+      <Filter>源文件\TestChapter</Filter>
+    </ClCompile>
+    <ClCompile Include="Test45.cpp">
+      <Filter>源文件\TestChapter</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Test45.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MyTest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TestCH11.h">
+      <Filter>头文件\TestChapter</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch11Sec5.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="NeedClass.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch11Sec7.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch11Sec8.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch11Sec9.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch11Sec10.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch11Sec11.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch11Sec12.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch11Sec13.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch11Sec14.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch12Sec1.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="TestCh12.h">
+      <Filter>头文件\TestChapter</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch12Sec2.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch12Sec3.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch12Sec4.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch12Sec5.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch12Sec6.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch12Sec7.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch12Sec8.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch12Sec9.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch12Sec10.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch12Sec11.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch12Sec12.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="TestCh13.h">
+      <Filter>头文件\TestChapter</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch13Sec10.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch13Sec9.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch13Sec8.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch13Sec6.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch13Sec7.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch13Sec5.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch13Sec4.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch13Sec3.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch13Sec2.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch13Sec1.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="TestCh14.h">
+      <Filter>头文件\TestChapter</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch14Sec4.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch14Sec3.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch14Sec2.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch14Sec1.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
