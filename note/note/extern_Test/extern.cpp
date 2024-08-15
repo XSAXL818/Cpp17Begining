@@ -1,0 +1,1 @@
+const int extern_int = 10;
