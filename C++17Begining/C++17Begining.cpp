@@ -7,6 +7,9 @@
 #include "TestCh12.h"
 #include "TestCh13.h"
 #include "TestCh14.h"
+#include "TestCh15.h"
+#include "BaseCharpter.h"
+
 
 using namespace std;
 
@@ -27,18 +30,28 @@ int main()
     MyTest::test3();
     cout << "-------------------------------------------------" << endl;*/
 
+    BaseCharpter::setChapter(11);
     // 第11章的测试
+    BaseCharpter::showChapterTitle("定义自己的数据类型");
     TestCH11::allTest();
     
     // 第12章的测试
+    BaseCharpter::showChapterTitle("运算符重载");
     TestCh12::allTest();
 
     
     // 第13章的测试
+    BaseCharpter::showChapterTitle("继承");
     TestCh13::allTest();
 
     // 第14章的测试
+    BaseCharpter::showChapterTitle("多态性");
     TestCh14::allTest();
+
+    // 第15章的测试
+    BaseCharpter::showChapterTitle("运行时错误和异常");
+    TestCh15::allTest();
+
 
 
     return 0;

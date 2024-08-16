@@ -31,6 +31,9 @@
     <Filter Include="源文件\TestPart">
       <UniqueIdentifier>{d007fdb2-4fe9-4f4e-a100-c9800d679f17}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\oldVer">
+      <UniqueIdentifier>{26dbc5ed-f966-44d7-818d-05d2b5498fcb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C++17Begining.cpp">
@@ -47,12 +50,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Test45.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="MyTest.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="TestCH11.h">
       <Filter>头文件\TestChapter</Filter>
     </ClInclude>
@@ -171,6 +168,45 @@
       <Filter>头文件\TestSection</Filter>
     </ClInclude>
     <ClInclude Include="Ch14Sec1.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseCharpter.h">
+      <Filter>头文件\TestChapter</Filter>
+    </ClInclude>
+    <ClInclude Include="TestCh15.h">
+      <Filter>头文件\TestChapter</Filter>
+    </ClInclude>
+    <ClInclude Include="MyTest.h">
+      <Filter>头文件\oldVer</Filter>
+    </ClInclude>
+    <ClInclude Include="Test45.h">
+      <Filter>头文件\oldVer</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch15Sec9.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch15Sec8.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch15Sec7.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch15Sec6.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch15Sec5.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch15Sec4.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch15Sec3.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch15Sec2.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch15Sec1.h">
       <Filter>头文件\TestSection</Filter>
     </ClInclude>
   </ItemGroup>

@@ -23,46 +23,56 @@ class TestCh12
 {
 public:
 	static void allTest() {
-
-		cout << "******************** Sec1：为类实现运算符 *************************" << endl;
+		BaseCharpter::setSection(1);
+		//cout << "******************** Sec1：为类实现运算符 *************************" << endl;
+		BaseCharpter::showSectionTitle("为类实现运算符");
 		Ch12Sec1::test1();
 		Ch12Sec1::test2();
 		Ch12Sec1::test3();
 		Ch12Sec1::test4();
 		Ch12Sec1::test5();
 
-
-		cout << "******************** Sec4：为输出流重载<<运算符 *************************" << endl;
+		BaseCharpter::setSection(4);
+		//cout << "******************** Sec4：为输出流重载<<运算符 *************************" << endl;
+		BaseCharpter::showSectionTitle("为输出流重载<<运算符");
 		Ch12Sec4::test1();
 
 
-		cout << "******************** Sec5：重载算符运算符 *************************" << endl;
+		//cout << "******************** Sec5：重载算符运算符 *************************" << endl;
+		BaseCharpter::showSectionTitle("重载算符运算符");
 		Ch12Sec5::test1();
 		Ch12Sec5::test2();
 
 
-		cout << "******************** Sec6：成员和非成员函数 *************************" << endl;
+		//cout << "******************** Sec6：成员和非成员函数 *************************" << endl;
+		BaseCharpter::showSectionTitle("成员和非成员函数");
 		Ch12Sec6::test1();
 
 
-		cout << "******************** Sec7：一元运算符重载 *************************" << endl;
+		//cout << "******************** Sec7：一元运算符重载 *************************" << endl;
+		BaseCharpter::showSectionTitle("一元运算符重载");
 		Ch12Sec7::test1();
 
 
-		cout << "******************** Sec8：重载递增和递减运算符 *************************" << endl;
+		//cout << "******************** Sec8：重载递增和递减运算符 *************************" << endl;
+		BaseCharpter::showSectionTitle("重载递增和递减运算符");
 		Ch12Sec8::test1();
 
 
-		cout << "******************** Sec9：重载数组下标运算符[] *************************" << endl;
+		//cout << "******************** Sec9：重载数组下标运算符[] *************************" << endl;
+		BaseCharpter::showSectionTitle("重载数组下标运算符[]");
 		Ch12Sec9::test1();
 
-		cout << "******************** Sec10：重载数组下标运算符[] *************************" << endl;
+		//cout << "******************** Sec10：重载数组下标运算符[] *************************" << endl;
+		BaseCharpter::showSectionTitle("函数对象");
 		Ch12Sec10::test1();
 
-		cout << "******************** Sec11：重载类型转换 *************************" << endl;
+		//cout << "******************** Sec11：重载类型转换 *************************" << endl;
+		BaseCharpter::showSectionTitle("重载类型转换");
 		Ch12Sec11::test1();
 
-		cout << "******************** Sec12：重载赋值运算符 *************************" << endl;
+		//cout << "******************** Sec12：重载赋值运算符 *************************" << endl;
+		BaseCharpter::showSectionTitle("重载赋值运算符");
 		Ch12Sec12::test1();
 		Ch12Sec12::test2();
 		Ch12Sec12::test3();

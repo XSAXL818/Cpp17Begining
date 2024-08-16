@@ -135,6 +135,7 @@
     <ClCompile Include="Test45.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BaseCharpter.h" />
     <ClInclude Include="Ch11Sec10.h" />
     <ClInclude Include="Ch11Sec11.h" />
     <ClInclude Include="Ch11Sec12.h" />
@@ -169,6 +170,15 @@
     <ClInclude Include="Ch14Sec2.h" />
     <ClInclude Include="Ch14Sec3.h" />
     <ClInclude Include="Ch14Sec4.h" />
+    <ClInclude Include="Ch15Sec1.h" />
+    <ClInclude Include="Ch15Sec2.h" />
+    <ClInclude Include="Ch15Sec3.h" />
+    <ClInclude Include="Ch15Sec4.h" />
+    <ClInclude Include="Ch15Sec5.h" />
+    <ClInclude Include="Ch15Sec6.h" />
+    <ClInclude Include="Ch15Sec7.h" />
+    <ClInclude Include="Ch15Sec8.h" />
+    <ClInclude Include="Ch15Sec9.h" />
     <ClInclude Include="MyTest.h" />
     <ClInclude Include="NeedClass.h" />
     <ClInclude Include="Test45.h" />
@@ -177,6 +187,7 @@
     <ClInclude Include="TestCh12.h" />
     <ClInclude Include="TestCh13.h" />
     <ClInclude Include="TestCh14.h" />
+    <ClInclude Include="TestCh15.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
