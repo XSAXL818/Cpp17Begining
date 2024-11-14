@@ -8,20 +8,31 @@ using namespace std;
 class Ch15Sec8{
 public:
 	static void test1() {
-		cout << "----------测试14_1: 使用基类指针和调用继承的函数" << endl;
+		cout << "----------测试1: 资源获取即初始化" << endl;
+		fun15_8_1();
 
-		cout << "对象调用\n";
-		ABox14_1_1 aBox{ 3 };
-		cout << "调用aBox的volume()函数：" << aBox.volume() << endl;
-		aBox.showVolume();
-
-		cout << "指针调用\n";
-		Box14_1_1* pBox = &aBox;
-		cout << "调用aBox的volume()函数：" << pBox->volume() << endl;
-		pBox->showVolume();
+		fun15_8_2();
+		
 
 	}
 
+	static void test2() {
+		cout << "----------测试2: 用于动态内存的标准RAII类" << endl;
+
+		try {
+			// 要是出现异常,arr不会被赋值
+			auto arr = fun15_8_2_1();
+		}
+		catch (int i) {
+			cout << i << endl;
+		}
+
+		MoreOops15_3_1_1* p = new BigOops15_3_1_1{};
+		cout << typeid(*p).name() << endl;
+
+		
+
+	}
 
 };
 

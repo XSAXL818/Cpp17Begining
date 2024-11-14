@@ -8,11 +8,11 @@
 #include "TestCh13.h"
 #include "TestCh14.h"
 #include "TestCh15.h"
+#include "TestCh16.h"
 #include "BaseCharpter.h"
 
 
 using namespace std;
-
 
 
 int main()
@@ -51,6 +51,10 @@ int main()
     // 第15章的测试
     BaseCharpter::showChapterTitle("运行时错误和异常");
     TestCh15::allTest();
+
+    // 第16章的测试
+    BaseCharpter::showChapterTitle("类模板");
+    TestCh16::allTest();
 
 
 

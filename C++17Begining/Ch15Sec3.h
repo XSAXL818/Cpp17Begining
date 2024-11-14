@@ -8,19 +8,75 @@ using namespace std;
 class Ch15Sec3{
 public:
 	static void test1() {
-		cout << "----------测试14_1: 使用基类指针和调用继承的函数" << endl;
+		cout << "\n------测试1：匹配catch处理程序和异常\n";
 
-		cout << "对象调用\n";
-		ABox14_1_1 aBox{ 3 };
-		cout << "调用aBox的volume()函数：" << aBox.volume() << endl;
-		aBox.showVolume();
-
-		cout << "指针调用\n";
-		Box14_1_1* pBox = &aBox;
-		cout << "调用aBox的volume()函数：" << pBox->volume() << endl;
-		pBox->showVolume();
-
+		for (int i = 0; i < 3; i++) {
+			try {
+				if (i == 0) {
+					throw Oops15_3_1_1{};
+				}
+				if (i == 1) {
+					throw MoreOops15_3_1_1{};
+				}
+				if (i == 2) {
+					throw BigOops15_3_1_1{};
+				}
+			}
+			catch (BigOops15_3_1_1& oops) {
+				cout << "1" << oops.getMsg() << endl;
+			}
+			catch (MoreOops15_3_1_1& oops) {
+				cout << "2" << oops.getMsg() << endl;
+			}
+			catch (Oops15_3_1_1& oops) {
+				cout << "3" << oops.getMsg() << endl;
+			}
+		}
 	}
+
+	static void test2() {
+		cout << "\n------测试2：用基类处理程序捕获派生类异常\n";
+
+		cout << "catch按引用接收" << endl;
+		for (int i = 0; i < 3; i++) {
+			try {
+				if (i == 0) {
+					throw Oops15_3_1_1{};
+				}
+				if (i == 1) {
+					throw MoreOops15_3_1_1{};
+				}
+				if (i == 2) {
+					throw BigOops15_3_1_1{};
+				}
+			}
+			catch (Oops15_3_1_1& oops) {
+				cout << typeid(oops).name() << endl;
+				cout << oops.getMsg() << endl;
+			}
+		}
+
+		cout << "catch按值接收" << endl;
+		for (int i = 0; i < 3; i++) {
+			try {
+				if (i == 0) {
+					throw Oops15_3_1_1{};
+				}
+				if (i == 1) {
+					throw MoreOops15_3_1_1{};
+				}
+				if (i == 2) {
+					throw BigOops15_3_1_1{};
+				}
+			}
+			catch (Oops15_3_1_1 oops) {
+				cout << typeid(oops).name() << endl;
+				cout << oops.getMsg() << endl;
+			}
+		}
+	}
+
+
 
 };
 

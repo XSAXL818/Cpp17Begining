@@ -44,7 +44,7 @@ public:
     Cube(int side) : m_side{ side } {};
 
     int getV() {
-        return pow(m_side, 3);
+        return (int)pow(m_side, 3);
     }
 
     /*bool isLargerThan(Cube& c) { // 接受引用，
@@ -69,7 +69,7 @@ public:
     explicit ExplicitCube(int side) : m_side{ side } {};
 
     int getV() {
-        return pow(m_side, 3);
+        return (int)pow(m_side, 3);
     }
 
     bool isLargerThan(ExplicitCube c) {

@@ -179,6 +179,16 @@
     <ClInclude Include="Ch15Sec7.h" />
     <ClInclude Include="Ch15Sec8.h" />
     <ClInclude Include="Ch15Sec9.h" />
+    <ClInclude Include="Ch16Sec1.h" />
+    <ClInclude Include="Ch16Sec10.h" />
+    <ClInclude Include="Ch16Sec2.h" />
+    <ClInclude Include="Ch16Sec3.h" />
+    <ClInclude Include="Ch16Sec4.h" />
+    <ClInclude Include="Ch16Sec5.h" />
+    <ClInclude Include="Ch16Sec6.h" />
+    <ClInclude Include="Ch16Sec7.h" />
+    <ClInclude Include="Ch16Sec8.h" />
+    <ClInclude Include="Ch16Sec9.h" />
     <ClInclude Include="MyTest.h" />
     <ClInclude Include="NeedClass.h" />
     <ClInclude Include="Test45.h" />
@@ -188,6 +198,7 @@
     <ClInclude Include="TestCh13.h" />
     <ClInclude Include="TestCh14.h" />
     <ClInclude Include="TestCh15.h" />
+    <ClInclude Include="TestCh16.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

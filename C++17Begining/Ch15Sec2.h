@@ -8,17 +8,66 @@ using namespace std;
 class Ch15Sec2{
 public:
 	static void test1() {
-		cout << "----------测试14_1: 使用基类指针和调用继承的函数" << endl;
+		cout << "---------测试：抛出异常---------" << endl;
+		for (int i = 0; i < 6; i++) {
+			try {
+				if (i % 2 == 0) {
+					throw "偶数";
+				}
+				cout << "未抛出偶数异常" << endl;
+				if (i % 3 == 2) {
+					throw 1;
+				}
+			}
+			catch (const char* msg) {
+				cout << "捕获异常：" << msg << endl;
+				return;
+			}
+			catch (int i) {
+				cout << "捕获异常：" << i << endl;
+			}
 
-		cout << "对象调用\n";
-		ABox14_1_1 aBox{ 3 };
-		cout << "调用aBox的volume()函数：" << aBox.volume() << endl;
-		aBox.showVolume();
+			cout << "循环迭代一次" << endl;
+		}
+		cout << "---------测试结束---------" << endl;
+	}
 
-		cout << "指针调用\n";
-		Box14_1_1* pBox = &aBox;
-		cout << "调用aBox的volume()函数：" << pBox->volume() << endl;
-		pBox->showVolume();
+	static void test2() {
+		cout << "\n---------测试：异常处理过程---------" << endl;
+		for (int i = 0; i < 6; i++) {
+			cout << "迭代: " << i << endl;
+			try {
+				Box15_2_2_1 box;
+				if (i % 2 == 1) {
+					// 不能抛出使用私有副本构造函数的类的对象
+					/*Box15_2_2_2 box1{};
+					throw box1;*/
+					throw Box15_2_2_2{};
+				}
+			}
+			catch (const char* msg) {
+				cout << "捕获异常：" << msg << endl;
+				return;
+			}
+			catch (Box15_2_2_2& box) {
+				box.show();
+			}
+			cout << "try-catch结束" << endl;
+		}
+	}
+
+	static void test3() {
+		cout << "\n---------测试：导致抛出异常的代码---------" << endl;
+
+		try {
+			fun15_2_2_1();
+			fun15_2_2_3();
+		}
+		catch (const char* msg) {
+			cout << "捕获异常：" << msg << endl;
+		}
+
+
 
 	}
 

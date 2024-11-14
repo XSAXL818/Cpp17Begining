@@ -2,14 +2,9 @@
 #include <iostream>
 #include "NeedClass.h"
 
-using namespace std;
 
 
-class Ch15Sec1{
+class Ch16Sec1{
 public:
-	
-
-
-
 };
 

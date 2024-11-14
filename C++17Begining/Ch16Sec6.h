@@ -1,15 +1,11 @@
 #pragma once
 #include <iostream>
 #include "NeedClass.h"
-
-using namespace std;
-
-
-class Ch15Sec1{
+class Ch16Sec6{
 public:
-	
+	static void test1() {
+		
 
-
-
+	}
 };
 

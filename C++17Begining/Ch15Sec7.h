@@ -8,18 +8,27 @@ using namespace std;
 class Ch15Sec7 {
 public:
 	static void test1() {
-		cout << "----------测试14_1: 使用基类指针和调用继承的函数" << endl;
+		cout << "----------测试1: noexcept限定符" << endl;
+		cout << "noexcept函数内捕获异常" << endl;
+		Class15_7_1_1::fun();
 
-		cout << "对象调用\n";
-		ABox14_1_1 aBox{ 3 };
-		cout << "调用aBox的volume()函数：" << aBox.volume() << endl;
-		aBox.showVolume();
+		cout << "noexcept函数内未成功捕获异常" << endl;
+		Class15_7_1_1::fun_except();
 
-		cout << "指针调用\n";
-		Box14_1_1* pBox = &aBox;
-		cout << "调用aBox的volume()函数：" << pBox->volume() << endl;
-		pBox->showVolume();
 
+	}
+
+
+	static void test2() {
+		cout << "----------测试2: 异常和析构函数" << endl;
+		//Class15_7_2_1 a;// 会test2代码执行完后终止程序
+
+		try {
+			Class15_7_2_2 b;
+		}
+		catch (int a) {
+			cout << a << endl;
+		}
 	}
 
 

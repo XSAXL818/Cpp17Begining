@@ -2,6 +2,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <memory>
+#include <utility>
 
 using namespace std;
 
@@ -681,7 +683,7 @@ public:
 	}
 
 	int getVolume() const {
-		return pow(side, 3);
+		return (int)pow(side, 3);
 	}
 };
 
@@ -695,7 +697,7 @@ public:
 	explicit Cube12_1_3(int _side) : side{_side}{}
 
 	int getVolume() const {// 别忘了声明为const
-		return pow(side, 3);
+		return (int)pow(side, 3);
 	}
 
 	friend bool operator<(const Cube12_1_3& c1, int side);
@@ -719,7 +721,7 @@ public:
 	Cube12_1_4_1(int _side) : side{ _side } {}
 
 	int getVolume() const {// 别忘了声明为const
-		return pow(side, 3);
+		return (int)pow(side, 3);
 	}
 };
 
@@ -737,7 +739,7 @@ public:
 	explicit Cube12_1_4_2(int _side) : side{ _side } {}
 
 	int getVolume() const {// 别忘了声明为const
-		return pow(side, 3);
+		return (int)pow(side, 3);
 	}
 };
 
@@ -762,7 +764,7 @@ public:
 	explicit Cube12_1_4_3(int _side) : side{ _side } {}
 
 	int getVolume() const {// 别忘了声明为const
-		return pow(side, 3);
+		return (int)pow(side, 3);
 	}
 	// 处理对象 < 体积数值
 	inline bool operator<(int v) {
@@ -808,7 +810,7 @@ public:
 	}
 
 	int getVolume() const {
-		return pow(side, 3);
+		return (int)pow(side, 3);
 	}
 };
 
@@ -973,8 +975,8 @@ public:
 		}
 	}
 	Matrix12_9(const vector<vector<int>>& d) : data{ d } {
-		row = data.size();
-		col = data[0].size();
+		row = (int)data.size();
+		col = (int)data[0].size();
 	}
 	vector<int>& operator[](int row) {
 		return data[row];
@@ -1023,7 +1025,7 @@ private:
 public:
 	Cube12_10_1(int s = 0) : side{ s } {}
 	
-	int getVolume() { return pow(side, 3); }
+	int getVolume() { return (int)pow(side, 3); }
 
 	Cube12_10_1(const Box12_10_1& box);
 
@@ -1037,7 +1039,7 @@ public:
 	Box12_10_1(int s = 0) : side{ s } {}
 
 	operator int() const {
-		return pow(side, 3);
+		return (int)pow(side, 3);
 	}
 
 	int getSide() const {
@@ -1530,8 +1532,8 @@ public:
 	ABox14_1_1() = default;
 	ABox14_1_1(int s, double b=0.8) : Box14_1_1{ s }, base{ b } {}
 
-	int volume() {
-		return getSide() * getSide() * getSide() * base;
+	double volume() {
+		return (int)getSide() * (int)getSide() * (int)getSide() * base;
 	}
 	void showVolume() {
 		cout << "ABox Volume: " << volume() << endl;
@@ -1544,7 +1546,7 @@ private:
 	int side;
 public:
 	Box14_3_1(int s) : side{s}{}
-	virtual int volume() {
+	virtual double volume() {
 		return pow(side, 3);
 	}
 
@@ -1570,7 +1572,7 @@ private:
 public:
 	ABox14_3_1(int s, double b = 0.8) : base{ b }, Box14_3_1{s} {}
 
-	int volume() {
+	double volume() {
 		return pow(getSide(), 3) * base;
 	}
 
@@ -2065,20 +2067,509 @@ public:
 
 
 
+class Box15_2_2_1 {
+public:
+	~Box15_2_2_1() {
+		cout << "Box1 析构函数\n";
+	}
+};
+
+class Box15_2_2_2 {
+private:
+	Box15_2_2_2(const Box15_2_2_2& box) {
+		cout << "副本构造函数\n";
+	}
+public:
+	Box15_2_2_2() = default;
+	~Box15_2_2_2() {
+		cout << "Box2 析构函数\n";
+	}
+	void show() {
+		cout << "ha" << endl;
+	}
+};
+
+inline void fun15_2_2_1() {
+	cout << "fun1" << endl;
+}
+
+inline void fun15_2_2_2() {
+	cout << "fun2" << endl;
+	throw "123";
+}
+
+inline void fun15_2_2_3() {
+	fun15_2_2_2();
+	cout << "fun3" << endl;
+}
+
+inline void fun15_2_2_4() {
+	cout << "fun4" << endl;
+}
+
+
+class Oops15_3_1_1 {
+protected:
+	string msg;
+
+public:
+	Oops15_3_1_1(const string& m="普通错误") : msg{m} {}
+
+	virtual string getMsg() const {
+		return msg;
+	}
+};
+
+class MoreOops15_3_1_1 : public Oops15_3_1_1 {
+public:
+	MoreOops15_3_1_1(const string& m = "中级错误") :Oops15_3_1_1{m}{}
+};
+
+class BigOops15_3_1_1 : public MoreOops15_3_1_1 {
+public:
+	BigOops15_3_1_1(const string& m = "重大") :MoreOops15_3_1_1{ m } {}
+};
+
+
+class Oops15_4_1 {
+protected:
+	string msg;
+public:
+	Oops15_4_1(const string& m = "普通错误") : msg{ m } {}
+	virtual ~Oops15_4_1() {
+		cout << "Oops 析构函数" << endl;
+	}
+	virtual string getMsg() const {
+		return msg;
+	}
+};
+
+class MoreOops15_4_1 : public Oops15_4_1 {
+public:
+	MoreOops15_4_1(const string& m = "中级错误") {
+		msg = m;
+	}
+
+	~MoreOops15_4_1() {
+		cout << "MoreOops 析构函数" << endl;
+	}
+};
+
+
+class Class15_7_1_1 {
+public:
+	static void  fun() noexcept {
+		try {
+			throw 1;
+		}
+		catch (int& i) {
+			cout << "i: " << i << endl;
+		}
+	}
+	static void  fun_except() throw() {
+		try {
+			//throw 3.1;// 程序在此处崩溃
+		}
+		catch (int& i) {
+			cout << "i: " << i << endl;
+		}
+	}
+};
+
+
+class Class15_7_2_1 {
+public:
+	// 抛出异常会终止程序
+	~Class15_7_2_1() noexcept(false) { throw 1; }
+};
+class Class15_7_2_2 {
+public:
+	// 显式声明可以抛出异常
+	~Class15_7_2_2() noexcept(false) { throw 1; }
+};
 
 
 
+inline int* fun15_8_1() {
+
+	int* res{ nullptr };
+	try {
+		// 申请资源
+		int* arr = new int[100];
+		arr[1] = 10;
+		res = arr;
+		// 可能抛出异常的计算
+		throw 1;
+		// 释放资源
+		delete[] arr;
+	}
+	catch (int a) {
+		cout << a << endl;
+	}
+	cout <<"数组访问：" << res[1] << endl;
+}
+
+class RAII15_8_1 {
+private:
+	int* res;
+public:
+	RAII15_8_1(int size) {
+		res = new int[size];
+		res[1] = 10;
+	}
+	~RAII15_8_1() {
+		cout << "RAII 析构函数\n";
+		delete[] res;
+	}
+	int* release() {
+		int* rel = res;
+		res = nullptr;
+		return rel;
+	}
+
+	int* get() {
+		return res;
+	}
+
+};
+
+inline void fun15_8_2() {
+	int* res{ nullptr };
+	try {
+		// 申请资源
+		RAII15_8_1 arr{ 100 };
+		res = arr.get();
+		// 可能抛出异常的计算
+		throw 1;
+		// 命名空间结束，自动释放资源
+	}
+	catch (int a) {
+		cout << a << endl;
+	}
+	// 原先的数据失效，且只能访问该内存，不能进行写操作
+	cout << "数组访问：" << res[1] << endl;
+	//delete res;
+}
+
+
+inline unique_ptr<int[]> fun15_8_2_1() {
+
+	auto arr = make_unique<int[]>(100);
+
+
+	throw 1;
+
+	return arr;
+}
+
+template <typename T>
+class MyClass16_1_1_1 {
+
+};
+
+// 与上述类模板重复
+//template <class T>
+//class MyClass16_1_1_1 {
+//
+//};
 
 
 
+template <typename T1,class T2, typename arg>
+class MyClass16_2_1_1 {
+
+};
+
+
+template <typename T>
+class MyArray16_2_2 {
+private:
+	T* elem{nullptr};
+	size_t size{ 0 };
+public:
+
+	explicit MyArray16_2_2<T>(int side=0) {
+		cout << "构造函数" << endl;
+		elem = new T[side];
+		size = side;
+	}
+
+	~MyArray16_2_2<T>() {
+		delete[] elem;
+	}
+	MyArray16_2_2<T>(const MyArray16_2_2<T>& arr) {
+		cout << "副本构造函数" << endl;
+	}
+	MyArray16_2_2& operator=(const MyArray16_2_2& arr) {
+		cout << "赋值运算符" << endl;
+	}
+	T& operator[](size_t s) {
+		cout << "重载[]" << endl;
+		return elem[s];
+	}
+	const T& operator[](size_t s) const {
+		cout << "重载[] const" << endl;
+		return elem[s];
+	}
+	size_t getSize() const {
+		return size;
+	}
+	
+};
+
+
+template <typename T>
+class MyArray16_3_1 {
+private:
+	T* elem;
+	size_t size;
+public:
+
+	MyArray16_3_1(size_t _size);
+	MyArray16_3_1(const MyArray16_3_1& arr);
+	~MyArray16_3_1();
+
+	const T& operator[](size_t s) const;
+	T& operator[](size_t s);
+	size_t getSize() { return size; }
+};
+
+template <typename T>
+MyArray16_3_1<T>::MyArray16_3_1(size_t _size) : elem{ new T[_size] }, size{ _size } {
+	cout << "模板构造函数" << endl;
+}
+
+template <typename T>
+MyArray16_3_1<T>::MyArray16_3_1(const MyArray16_3_1& arr) {
+	delete[] elem;
+	cout << "副本构造函数" << endl;
+	size = arr.size;
+	elem = new T[size];
+	for (int i = 0; i < size; i++) {
+		elem[i] = arr.elem[i];
+	}
+}
+template <typename T>
+MyArray16_3_1<T>::~MyArray16_3_1() {
+	delete[] elem;
+	cout << "析构函数" << endl;
+}
+
+template <typename T>
+const T& MyArray16_3_1<T>::operator[](size_t s) const {
+	cout << "静态下标[]运算符\n";
+	if (s >= size) {
+		throw std::out_of_range{ "Index is non-vaild" + std::to_string(s) };
+	}
+	return elem[s];
+}
+// 避免代码重复，使用const版本来实现非const，此方法效率较非const实现const高
+template <typename T>
+T& MyArray16_3_1<T>::operator[](size_t s) {
+	cout << "动态下标[]运算符\n";
+	return const_cast<T&>( std::as_const(*this)[s] );
+}
+
+
+class Data16_3_3 {
+public:
+	Data16_3_3() {
+		cout << "默认构造函数\n";
+	}
+	Data16_3_3(const Data16_3_3& data) {
+		cout << "副本构造函数\n";
+	}
+};
+
+class Test16_3_3_1 {
+public:
+	Data16_3_3 arr[10];
+	Test16_3_3_1() = default;
+
+	Data16_3_3& operator[](int s) {
+		return arr[s];
+	}
+	const Data16_3_3& operator[](int s) const {
+		return const_cast<Test16_3_3_1&>(*this)[s];
+	}
+};
+
+class Test16_3_3_2 {
+public:
+	Data16_3_3 arr[10];
+	Test16_3_3_2() = default;
+
+	Data16_3_3& operator[](int s) {
+		cout << "非const\n";
+		return const_cast<Data16_3_3&>(std::as_const(*this)[s]);
+	}
+	const Data16_3_3& operator[](int s) const {
+		cout << "const\n";
+		return arr[s];
+	}
+};
+
+
+template<typename T>
+class Array16_3_4 {
+private:
+	T* elem;
+	size_t size;
+
+public:
+	Array16_3_4(size_t _size) : elem{ new T[_size] }, size{ _size } {
+		cout << "构造函数" << endl;
+	}
+
+	~Array16_3_4() {
+		delete[] elem;
+	}
+
+	Array16_3_4(const Array16_3_4& arr);
+	const T& operator[](size_t s) const;
+	T& operator[](size_t s);
+	void swap(Array16_3_4& other) noexcept; 
+	Array16_3_4<T>& operator=(const Array16_3_4& arr);
+
+	void println() {
+		for (int i = 0; i < size; i++) {
+			cout << elem[i] << " ";
+		}
+		cout << endl;
+	}
+};
+
+template<typename T>
+Array16_3_4<T>& Array16_3_4<T>::operator=(const Array16_3_4& arr) {
+	cout << "=赋值运算符" << endl;
+	// 复制后交换
+	if (this != &arr) {
+		// 1、创建对象的一个副本
+		Array16_3_4<T> copy{ arr };
+		// 2、如果有需要，修改副本
+		// 3、修改后，用副本替换原对象
+		swap(copy);
+	}
+	return *this;
+}
+
+// 通过实现一个swap(other)成员函数，来实现swap(one,other)外部函数
+template<typename T>
+void Array16_3_4<T>::swap(Array16_3_4& other) noexcept {
+	std::swap(elem, other.elem);
+	std::swap(size, other.size);
+}
+// 非成员函数的swap函数
+template<typename T>
+void swap(Array16_3_4<T>& one, Array16_3_4<T>& other) noexcept  {
+	one.swap(other);
+}
+
+template<typename T>
+Array16_3_4<T>::Array16_3_4(const Array16_3_4& arr) {
+	cout << "副本构造函数" << endl;
+	elem = new T[arr.size];
+	size = arr.size;
+	for (int i = 0; i < size; i++) {
+		elem[i] = arr.elem[i];
+	}
+}
+
+template<typename T>
+const T& Array16_3_4<T>::operator[](size_t s) const {
+	cout << "重载[] const" << endl;
+	if (s >= size) {
+		throw std::out_of_range{ "Index is non-vaild" + std::to_string(s) };
+	}
+	return elem[s];
+}
+
+template<typename T>
+T& Array16_3_4<T>::operator[](size_t s) {
+	cout << "重载[]" << endl;
+	return const_cast<T&>(std::as_const(*this)[s]);
+}
+
+
+template<typename T,T value>
+class Array16_5_1 {
+private:
+	T* elem;
+	size_t size;
+public:
+	Array16_5_1(size_t _size) : elem{ new T[_size] }, size{ _size } {
+		cout << "构造函数" << endl;
+		for (int i = 0; i < size; ++i) {
+			elem[i] = value;
+		}
+	}
+
+	~Array16_5_1() {
+		delete[] elem;
+	}
+
+	void println() {
+		for (int i = 0; i < size; i++) {
+			cout << elem[i] << " ";
+		}
+		cout << endl;
+	}
+};
+
+template<typename T, int size>
+class Class16_5_1 {
+public:
+	static inline int a{ 3 };
+	void f1();
+	
+};
+template<typename T, int size>
+void Class16_5_1<T,size>::f1() {
+	// 不能修改非类型参数
+	//size = 3;
+}
+
+
+template<typename T, int* size>
+class Class16_5_2 {
+public:
+};
 
 
 
+template<typename T>
+class Class16_7_1 {
+public:
+	void f1();
+};
+
+template class Class16_7_1<int>;
 
 
+template<typename T>
+class Array16_8_1 {
+public:
+	T a;
+	T b;
+public:
+	T getMax();
+};
+template<typename T>
+T Array16_8_1<T>::getMax() {
+	return a > b ? a : b;
+}
 
+template<>
+class Array16_8_1<char*>{
+private:
 
-
-
-
+public:
+	char* a;
+	char* b;
+	string getMax() {
+		string s1{ a };
+		string s2{ b };
+		return s1 > s2 ? s1 : s2;
+	}
+};
 

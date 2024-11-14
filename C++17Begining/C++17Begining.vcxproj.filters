@@ -209,5 +209,38 @@
     <ClInclude Include="Ch15Sec1.h">
       <Filter>头文件\TestSection</Filter>
     </ClInclude>
+    <ClInclude Include="TestCh16.h">
+      <Filter>头文件\TestChapter</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16Sec10.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16Sec9.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16Sec8.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16Sec7.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16Sec6.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16Sec5.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16Sec4.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16Sec3.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16Sec2.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch16Sec1.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
