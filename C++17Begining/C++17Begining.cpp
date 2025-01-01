@@ -9,6 +9,7 @@
 #include "TestCh14.h"
 #include "TestCh15.h"
 #include "TestCh16.h"
+#include "TestCh17.h"
 #include "BaseCharpter.h"
 
 
@@ -33,30 +34,32 @@ int main()
     BaseCharpter::setChapter(11);
     // 第11章的测试
     BaseCharpter::showChapterTitle("定义自己的数据类型");
-    TestCH11::allTest();
+    //TestCH11::allTest();
     
     // 第12章的测试
     BaseCharpter::showChapterTitle("运算符重载");
-    TestCh12::allTest();
+    //TestCh12::allTest();
 
     
     // 第13章的测试
     BaseCharpter::showChapterTitle("继承");
-    TestCh13::allTest();
+    //TestCh13::allTest();
 
     // 第14章的测试
     BaseCharpter::showChapterTitle("多态性");
-    TestCh14::allTest();
+    //TestCh14::allTest();
 
     // 第15章的测试
     BaseCharpter::showChapterTitle("运行时错误和异常");
-    TestCh15::allTest();
+    //TestCh15::allTest();
 
     // 第16章的测试
     BaseCharpter::showChapterTitle("类模板");
-    TestCh16::allTest();
+    //TestCh16::allTest();
 
-
+    // 第17章的测试
+	BaseCharpter::showChapterTitle("移动语义");
+	TestCh17::allTest();
 
     return 0;
 }

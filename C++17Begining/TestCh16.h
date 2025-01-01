@@ -43,6 +43,9 @@ public:
 		BaseCharpter::showSectionTitle("类模板特化");
 		Ch16Sec8::test1();
 
+
+
+
 	}
 	
 };

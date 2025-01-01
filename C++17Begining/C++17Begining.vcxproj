@@ -133,6 +133,7 @@
     <ClCompile Include="MyTest.cpp" />
     <ClCompile Include="NeedClass.cpp" />
     <ClCompile Include="Test45.cpp" />
+    <ClCompile Include="TestCh17.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseCharpter.h" />
@@ -189,6 +190,13 @@
     <ClInclude Include="Ch16Sec7.h" />
     <ClInclude Include="Ch16Sec8.h" />
     <ClInclude Include="Ch16Sec9.h" />
+    <ClInclude Include="Ch17Sec1.h" />
+    <ClInclude Include="Ch17Sec2.h" />
+    <ClInclude Include="Ch17Sec3.h" />
+    <ClInclude Include="Ch17Sec4.h" />
+    <ClInclude Include="Ch17Sec5.h" />
+    <ClInclude Include="Ch17Sec6.h" />
+    <ClInclude Include="Ch17Sec7.h" />
     <ClInclude Include="MyTest.h" />
     <ClInclude Include="NeedClass.h" />
     <ClInclude Include="Test45.h" />

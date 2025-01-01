@@ -2573,3 +2573,44 @@ public:
 	}
 };
 
+class MyClass17_1 {
+public:
+	int value;
+	MyClass17_1(int val) : value(val) {}
+
+	static MyClass17_1 createObject() {
+		return MyClass17_1(10);
+	}
+};
+
+
+template<typename T>
+void printTypeInfo(T t) {
+	if (std::is_reference<T>::value) {
+		std::cout << "The type is a reference." << std::endl;
+	}
+	else {
+		std::cout << "The type is not a reference." << std::endl;
+	}
+}
+
+class MyData17_2 {
+public:
+	string str;
+	int x;
+
+	MyData17_2(string s, int _x) : str(s), x(_x) {};
+	MyData17_2(const MyData17_2& data) : str(data.str), x(data.x) {
+		cout << "副本构造函数" << endl;
+	}
+};
+
+
+class MyArray17_2 {
+public:
+	MyData17_2 data;
+
+	MyArray17_2(MyData17_2 d) : data(d) {}
+
+
+};

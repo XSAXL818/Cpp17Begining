@@ -9,27 +9,14 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="资源文件">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="头文件\TestChapter">
       <UniqueIdentifier>{7204bb8e-9797-4d0d-9d44-3a355ee5814f}</UniqueIdentifier>
     </Filter>
     <Filter Include="头文件\TestSection">
       <UniqueIdentifier>{1f733009-3aab-42e1-8d7a-7dab49025cd0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\TestPart">
-      <UniqueIdentifier>{64b10414-3567-4981-9a13-1c33dfebd577}</UniqueIdentifier>
-    </Filter>
     <Filter Include="源文件\TestChapter">
       <UniqueIdentifier>{d982152c-ede7-4601-a561-c20c6a0def15}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\TestSection">
-      <UniqueIdentifier>{1751672a-179b-4cf1-a5ba-c47c612ffac5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\TestPart">
-      <UniqueIdentifier>{d007fdb2-4fe9-4f4e-a100-c9800d679f17}</UniqueIdentifier>
     </Filter>
     <Filter Include="头文件\oldVer">
       <UniqueIdentifier>{26dbc5ed-f966-44d7-818d-05d2b5498fcb}</UniqueIdentifier>
@@ -47,6 +34,9 @@
     </ClCompile>
     <ClCompile Include="Test45.cpp">
       <Filter>源文件\TestChapter</Filter>
+    </ClCompile>
+    <ClCompile Include="TestCh17.h">
+      <Filter>头文件\TestChapter</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -240,6 +230,27 @@
       <Filter>头文件\TestSection</Filter>
     </ClInclude>
     <ClInclude Include="Ch16Sec1.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch17Sec1.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch17Sec2.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch17Sec3.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch17Sec4.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch17Sec5.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch17Sec6.h">
+      <Filter>头文件\TestSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Ch17Sec7.h">
       <Filter>头文件\TestSection</Filter>
     </ClInclude>
   </ItemGroup>
